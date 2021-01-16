@@ -14,7 +14,7 @@
         "outputPath": "C:\\Users\\stefa\\OneDrive\\1_MSc_Computer_Science\\Coding Projects\\ML proj\\ai_from_scratch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -23,7 +23,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net50"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -32,7 +32,8 @@
           "https://pkgs.dev.azure.com/bpcgr/_packaging/BPC_Packages%40Local/nuget/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp5.0": {
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -43,7 +44,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp5.0": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
             "Accord.Math": {
               "target": "Package",
