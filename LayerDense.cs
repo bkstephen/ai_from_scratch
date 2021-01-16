@@ -11,32 +11,35 @@ namespace ai_from_scratch
     {
         public LayerDense(IList<double[]> inputs, int neuronsCount)
         {
-            for (int i = 0; i < neuronsCount; i++) 
+            for (int i = 0; i < neuronsCount; i++)
             {
-                var tempWeights = new List<double>();
-                for (int weightsCount = 0; weightsCount < inputs.Count(); weightsCount++)
-                {
-                    tempWeights.Add(new Random().NextDouble() * (new Random().Next(-1, 1) < 0 ? -1 : 1));
-                }
+                // Create random weights for each neuron
+                var tempWeights = Vector.Random(inputs.Count());
                 var newNeuron = new Neuron
                 {
                     Weights = tempWeights,
                     Bias = 0,
                 };
-                newNeuron.DotProduct = Matrix.Dot(inputs.ToArray(), newNeuron.Weights.ToArray())
-                                        .Select(s => s + newNeuron.Bias)
-                                        .ToArray();
-                if (Neurons == null)
-                {
-                    Neurons = new List<Neuron>();
-                }
-
                 Neurons.Add(newNeuron);
             }
+
+            Forward(inputs);
         }
 
-        public IList<Neuron> Neurons { get; set; }
+        public IList<Neuron> Neurons { get; set; } = new List<Neuron>();
 
         public int Ordinal { get; set; }
+
+        public double[][] DotProduct { get; set; }
+
+        public void Forward(IList<double[]> inputs)
+        {
+            var weights = Neurons.Select(s => s.Weights).ToArray();
+            var biases = Neurons.Select(s => s.Bias).ToArray();
+
+            var test = DotProduct = Matrix.Dot(inputs.ToArray(), weights.Transpose())
+                                .Select(val => val.Select((s, i) => s + biases[i]).ToArray())
+                                .ToArray();
+        }
     }
 }

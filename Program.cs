@@ -33,7 +33,7 @@ namespace ai_from_scratch
         static void Main(string[] args)
         {
             var newLayer = new LayerDense(inputs, 6);
-            var result = newLayer.Neurons.Select(s => s.DotProduct);
+            var result = newLayer.DotProduct;
 
             //var weighted_output = Matrix.Dot( inputs, weights.Transpose())
             //        .Select(val=> val.Select((s, i) => s + biases[i]).ToArray())

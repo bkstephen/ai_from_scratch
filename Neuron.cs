@@ -9,10 +9,9 @@ namespace ai_from_scratch
 {
     public class Neuron
     {
-        public IList<double> Weights { get; set; }
+        public double[] Weights { get; set; }
 
         public double Bias { get; set; }
 
-        public double[] DotProduct { get; set; }
     }
 }
