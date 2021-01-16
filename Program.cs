@@ -14,13 +14,13 @@ namespace ai_from_scratch
             new[] {-1.5, 2.7, 3.3, -0.8}
         };
         // Each neuron has its own weight and bias
-        private static double[][] weights = new[] 
+        private static double[][] weights = new[]
         {
             new[] { 0.2, 0.8, -0.5, 1.0 },
             new[] { 0.5, -0.91, 0.26, -0.5 },
             new[] { -0.26, -0.27, 0.17, 0.87 }
-        };        
-        private static double[] biases = new[] {2.0, 3.0, 0.5};
+        };
+        private static double[] biases = new[] { 2.0, 3.0, 0.5 };
 
         private static double[][] weights2 = new[]
         {

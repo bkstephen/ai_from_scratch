@@ -50,6 +50,14 @@
             "Accord.Math": {
               "target": "Package",
               "version": "[3.8.0, )"
+            },
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.12.1, )"
+            },
+            "OxyPlot.Core": {
+              "target": "Package",
+              "version": "[2.0.0, )"
             }
           },
           "imports": [
