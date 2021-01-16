@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1jmtc5lNeLMFlTwGLg259qvNBs3HKSrXm0moogGpMeOYdY1vacCMXHX24vesTUctFCA59SGPqR77njtJvb8E7g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\stefa\\OneDrive\\1_MSc_Computer_Science\\Coding Projects\\ML proj\\ai_from_scratch\\ai_from_scratch.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\stefa\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\stefa\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}
