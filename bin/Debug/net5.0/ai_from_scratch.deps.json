@@ -7,6 +7,9 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "ai_from_scratch/1.0.0": {
+        "dependencies": {
+          "Accord.Math": "3.8.0"
+        },
         "runtime": {
           "ai_from_scratch.dll": {}
         }
