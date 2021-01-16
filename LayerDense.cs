@@ -36,8 +36,7 @@ namespace ai_from_scratch
         {
             var weights = Neurons.Select(s => s.Weights).ToArray();
             var biases = Neurons.Select(s => s.Bias).ToArray();
-
-            var test = DotProduct = Matrix.Dot(inputs.ToArray(), weights.Transpose())
+            DotProduct = Matrix.Dot(inputs.ToArray(), weights.Transpose())
                                 .Select(val => val.Select((s, i) => s + biases[i]).ToArray())
                                 .ToArray();
         }
