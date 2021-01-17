@@ -26,7 +26,16 @@ activation2.forward(layer2.output)
 
 loss_function = LossCategoricalCrossentropy()
 
+# Calculate accuracy from output of activation2 and targets
+# calculate values along first axis
+predictions = np.argmax(activation2.output, axis=1)
+if len(y.shape) == 2:
+    y = np.argmax(y, axis=1)
+accuracy = np.mean(predictions == y)
+# Print accuracy
+
 print(activation2.output[:5])
 print("  Loss: ", loss_function.calculate(activation2.output, y))
+print('acc:', accuracy)
 
 ### TEST STUFF  ###
