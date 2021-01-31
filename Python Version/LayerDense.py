@@ -1,18 +1,13 @@
 import numpy as np 
-from Neuron import Neuron
+from Neurons import Neurons
 
 class LayerDense:
 
-    def __init__(self, n_inputs, n_neurons):
-        tempNeurons = []
-        for i in range(0, n_neurons):
-            tempNeurons.append(Neuron(n_inputs))
-        self.neurons = tempNeurons
+    def __init__(self, n_inputs, n_neurons):        
+        # Initialize weights and biases
+        self.neurons = Neurons(n_inputs, n_neurons)
+        self.weights = self.neurons.weights
+        self.biases = self.neurons.biases      
 
     def forward(self, inputs):
-        biases = []
-        weights = []        
-        for neuron in self.neurons:
-            weights.append(neuron.weights)                    
-            biases.append(neuron.bias)            
-        self.output = np.dot(inputs, np.array(weights).T) + biases
+        self.output = np.dot(inputs, self.weights) + self.biases

@@ -1,5 +1,6 @@
 import nnfs
 from nnfs.datasets import spiral_data
+from nnfs.datasets import vertical_data
 import numpy as np
 
 class data_gen:
